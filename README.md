@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/Adron/dev-setup-ubuntu.png?label=ready&title=Ready)](https://waffle.io/Adron/dev-setup-ubuntu)
 # Ubuntu Development Machine
 
 Setup & Installation
