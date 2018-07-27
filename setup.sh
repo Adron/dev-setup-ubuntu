@@ -40,10 +40,10 @@ tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 
 echo "Installing Node.js."
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
 nvm install 6.12.3
-nvm install latest
-
+nvm install node
+nvm alias default node
 
 echo "Confirmation of Installations"
 
