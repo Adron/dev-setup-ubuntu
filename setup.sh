@@ -15,6 +15,14 @@ apt-get update
 apt-get install oracle-java8-installer
 apt-get install maven
 
+echo "Installing .NET Core 2.1."
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install dotnet-sdk-2.1
+
 echo "Installing Visual Studio"
 VISUALSTUDIOFILENAME="visualstudiocode.deb"
 wget -O $VISUALSTUDIOFILENAME https://go.microsoft.com/fwlink/?LinkID=760868
