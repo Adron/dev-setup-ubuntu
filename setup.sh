@@ -48,13 +48,13 @@ nvm alias default node
 echo "Confirmation of Installations"
 
 echo "Version of Node.js & NVM installed."
-echo nvm --version
-echo node --version
+nvm --version
+node --version
 
 echo "Version of Go Installed."
-echo go --version
+go --version
 
 echo "Version of .NET Core Installed."
-dotnet --version
+--version
 
 echo "Finished the things."
