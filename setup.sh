@@ -8,6 +8,12 @@ cd SETUPDIR
 echo "Installing some basic utilities and related tooling."
 apt-get install curl tree jq git atop nmap build-essential exfat-fuse exfat-utils
 
+echo "Installing Java 8 and Maven."
+apt-get purge openjdk*
+add-apt-repository ppa:webupd8team/java
+apt-get update
+apt-get install oracle-java8-installer
+apt-get install maven
 
 echo "Installing Visual Studio"
 VISUALSTUDIOFILENAME="visualstudiocode.deb"
