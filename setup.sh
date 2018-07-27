@@ -15,13 +15,6 @@ sudo apt-get atop
 sudo apt-get nmap
 sudo apt-get build-essential
 
-git clone https://github.com/relan/exfat.git
-cd exfat
-autoreconf --install
-./configure
-make
-make install
-
 echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
