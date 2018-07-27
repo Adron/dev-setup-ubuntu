@@ -6,13 +6,13 @@ mkdir SETUPDIR
 cd SETUPDIR
 
 echo "\n\n\n\nInstalling some basic utilities and related tooling.\n\n\n\n"
-sudo apt-get install curl
-sudo apt-get install tree
-sudo apt-get install jq
-sudo apt-get install git
-sudo apt-get install atop
-sudo apt-get install nmap
-sudo apt-get install build-essential
+sudo apt-get install curl -y
+sudo apt-get install tree -y
+sudo apt-get install jq -y
+sudo apt-get install git -y
+sudo apt-get install atop -y
+sudo apt-get install nmap -y
+sudo apt-get install build-essential -y
 
 echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
