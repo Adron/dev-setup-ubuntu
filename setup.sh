@@ -9,11 +9,11 @@ echo "Installing some basic utilities and related tooling."
 apt-get install curl tree jq git atop nmap build-essential exfat-fuse exfat-utils
 
 echo "Installing Java 8 and Maven."
-apt-get purge openjdk*
-add-apt-repository ppa:webupd8team/java
-apt-get update
-apt-get install oracle-java8-installer
-apt-get install maven
+sudo apt-get purge openjdk*
+sudo add-apt-repository ppa:webupd8team/java
+sudo apt-get update
+sudo apt-get install oracle-java8-installer
+sudo apt-get install maven
 
 echo "Installing .NET Core 2.1."
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -36,3 +36,11 @@ cd jetbrains-toolbox-1.0.1569/
 ./jetbrains-toolbox
 cd ..
 rm -rf jetbrains*
+
+
+echo "Confirmation of Installations"
+
+echo
+
+echo "Version of .NET Core Installed."
+dotnet --version
