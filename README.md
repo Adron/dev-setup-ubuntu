@@ -12,8 +12,9 @@ Or if you'd like to trust but verify.
 
 ```shell-script
 wget -O setup.sh https://raw.githubusercontent.com/Adron/dev-setup-ubuntu/master/setup.sh
-./setup.sh
 ```
+
+Then set the file setup.sh with execute permissions and execute script.
 
 This is the setup and installation script I've created for getting a basic Ubuntu development machine setup.
 
