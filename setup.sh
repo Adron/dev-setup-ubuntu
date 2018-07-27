@@ -12,7 +12,9 @@ echo "Installing Java 8 and Maven."
 sudo apt-get purge openjdk*
 sudo add-apt-repository ppa:webupd8team/java
 sudo apt-get update
-sudo apt-get install oracle-java8-installer
+sudo apt-get install -y software-properties-common debconf-utils
+sudo echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
+sudo apt-get install -y oracle-java8-installer
 sudo apt-get install maven
 
 echo "Installing .NET Core 2.1."
