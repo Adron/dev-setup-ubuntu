@@ -8,14 +8,11 @@ cd SETUPDIR
 echo "Installing some basic utilities and related tooling."
 apt-get install curl tree jq git atop nmap build-essential exfat-fuse exfat-utils
 
-echo "Installing Java 8 and Maven."
-sudo apt-get purge openjdk*
-sudo add-apt-repository ppa:webupd8team/java
-sudo apt-get update
-sudo apt-get install -y software-properties-common debconf-utils
-sudo echo "oracle-java8-installer shared/accepted-oracle-license-v1-1 select true" | sudo debconf-set-selections
-sudo apt-get install -y oracle-java8-installer
-sudo apt-get install maven
+echo "Installing Java 10 and Maven."
+sudo add-apt-repository ppa:linuxuprising/java
+sudo apt update
+sudo apt install oracle-java10-installer
+sudo apt-get install oracle-java10-set-default
 
 echo "Installing .NET Core 2.1."
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -53,7 +50,11 @@ echo "Version of Go Installed."
 echo go --version
 
 echo "Version of Java Installed."
+/usr/lib/jvm/java-10-oracle/bin/java -version
+
 echo java --version
 
 echo "Version of .NET Core Installed."
 dotnet --version
+
+echo "Finished the things."
