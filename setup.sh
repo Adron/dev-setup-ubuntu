@@ -52,4 +52,4 @@ cd jetbrains-toolbox-1.0.1569/
 cd ..
 rm -rf jetbrains*
 
-echo "Finished the things."
+echo "Fini."
