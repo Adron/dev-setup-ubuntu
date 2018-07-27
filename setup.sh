@@ -10,7 +10,7 @@ VERSION="1.10.3"
 OS="linux"
 ARCH="amd64"
 
-wget -O - https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
+wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo '' >> ~/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
