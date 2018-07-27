@@ -30,6 +30,7 @@ cd jetbrains-toolbox-1.0.1569/
 cd ..
 rm -rf jetbrains*
 
+echo "Installing Go."
 VERSION="1.10.3"
 OS="Linux"
 ARCH="amd64"
@@ -38,7 +39,17 @@ wget -O - https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 
+echo "Installing Node.js."
+wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+nvm install 6.12.3
+nvm install latest
+
+
 echo "Confirmation of Installations"
+
+echo "Version of Node.js & NVM installed."
+echo nvm --version
+echo node --version
 
 echo "Version of Go Installed."
 echo go --version
