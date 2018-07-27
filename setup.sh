@@ -45,11 +45,15 @@ ARCH="amd64"
 
 wget -O - https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
-
+echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 
 echo "Confirmation of Installations"
 
-echo java --v
+echo "Version of Go Installed."
+echo go --version
+
+echo "Version of Java Installed."
+echo java --version
 
 echo "Version of .NET Core Installed."
 dotnet --version
