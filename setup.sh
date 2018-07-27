@@ -5,21 +5,16 @@ echo "Hello, starting Ubuntu setup."
 mkdir SETUPDIR
 cd SETUPDIR
 
-echo "\n\n\n\nInstalling Go.\n\n\n\n"
+echo "Installing Go."
 VERSION="1.10.3"
 OS="linux"
 ARCH="amd64"
 
 wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
-tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo '' >> ~/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-
-echo "\n\n\n\nInstalling Node.js.\n\n\n\n"
-wget -qO- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-nvm install 6.12.3
-nvm install node
-nvm alias default node
+source ~/.bashrc
 
 echo "\n\n\n\nInstalling Visual Studio\n\n\n\n"
 VISUALSTUDIOFILENAME="visualstudiocode.deb"
