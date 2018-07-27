@@ -39,10 +39,17 @@ cd jetbrains-toolbox-1.0.1569/
 cd ..
 rm -rf jetbrains*
 
+VERSION="1.10.3"
+OS="Linux"
+ARCH="amd64"
+
+wget -O - https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
+tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
+
 
 echo "Confirmation of Installations"
 
-echo
+echo java --v
 
 echo "Version of .NET Core Installed."
 dotnet --version
