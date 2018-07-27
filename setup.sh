@@ -5,15 +5,6 @@ echo "Hello, starting Ubuntu setup."
 mkdir SETUPDIR
 cd SETUPDIR
 
-
-echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install dotnet-sdk-2.1
-
 echo "\n\n\n\nInstalling Go.\n\n\n\n"
 VERSION="1.10.3"
 OS="linux"
@@ -43,5 +34,13 @@ cd jetbrains-toolbox-1.0.1569/
 ./jetbrains-toolbox
 cd ..
 rm -rf jetbrains*
+
+echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
+wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+sudo dpkg -i packages-microsoft-prod.deb
+
+sudo apt-get update
+sudo apt-get install apt-transport-https
+sudo apt-get install dotnet-sdk-2.1
 
 echo "Check it, Fini."
