@@ -5,7 +5,7 @@
 Setup & Installation
 
 ```shell-script
-bash <(curl -s https://raw.githubusercontent.com/Adron/dev-setup-ubuntu/master/setup.sh)
+wget -O - https://raw.githubusercontent.com/Adron/dev-setup-ubuntu/master/setup.sh | bash
 ```
 
 This is the setup and installation script I've created for getting a basic Ubuntu development machine setup.
