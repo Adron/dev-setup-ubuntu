@@ -4,6 +4,10 @@ echo "Hello, starting Ubuntu setup."
 
 mkdir SETUPDIR
 cd SETUPDIR
+sudo apt-get update
+
+echo "Installing fundamentally necessary dev tools."
+sudo apt-get install git
 
 echo "Installing Go."
 VERSION="1.10.3"
@@ -28,7 +32,6 @@ tar -xzf jetbrains-toolbox-1.0.1569.tar.gz
 cd jetbrains-toolbox-1.0.1569/
 ./jetbrains-toolbox
 cd ..
-rm -rf jetbrains*
 
 echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
