@@ -18,7 +18,6 @@ wget https://dl.google.com/go/go$VERSION.$OS-$ARCH.tar.gz
 sudo tar -C /usr/local -xzf go$VERSION.$OS-$ARCH.tar.gz
 echo '' >> ~/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
-source ~/.bashrc
 
 echo "Installing Jetbrains Toolbox."
 wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.0.1569.tar.gz
@@ -41,4 +40,5 @@ sudo apt-get update
 sudo apt-get install apt-transport-https
 sudo apt-get install dotnet-sdk-2.1
 
+source ~/.bashrc
 echo "Check it, Fini."
