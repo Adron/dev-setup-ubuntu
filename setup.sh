@@ -20,20 +20,20 @@ echo '' >> ~/.bashrc
 echo 'export PATH=$PATH:/usr/local/go/bin' >> ~/.bashrc
 source ~/.bashrc
 
-echo "\n\n\n\nInstalling Jetbrains Toolbox.\n\n\n\n"
+echo "Installing Jetbrains Toolbox."
 wget https://download.jetbrains.com/toolbox/jetbrains-toolbox-1.0.1569.tar.gz
 tar -xzf jetbrains-toolbox-1.0.1569.tar.gz
 cd jetbrains-toolbox-1.0.1569/
 ./jetbrains-toolbox
 cd ..
 
-echo "\n\n\n\nInstalling Visual Studio\n\n\n\n"
+echo "Installing Visual Studio."
 VISUALSTUDIOFILENAME="visualstudiocode.deb"
 wget -O $VISUALSTUDIOFILENAME https://go.microsoft.com/fwlink/?LinkID=760868
 sudo dpkg -i $VISUALSTUDIOFILENAME
 sudo apt-get install -f
 
-echo "\n\n\n\nInstalling .NET Core 2.1.\n\n\n\n"
+echo "Installing .NET Core 2.1."
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 
