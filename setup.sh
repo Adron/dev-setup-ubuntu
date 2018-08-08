@@ -8,6 +8,7 @@ sudo apt-get update
 
 echo "Installing fundamentally necessary dev tools."
 sudo apt-get install git -y
+sudo apt-get install 
 
 echo "Installing Go."
 VERSION="1.10.3"
@@ -42,3 +43,23 @@ sudo apt-get install dotnet-sdk-2.1 -y
 
 source ~/.bashrc
 echo "Check it, Fini."
+
+echo "Docker installation"
+sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common
+   
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+  
+sudo apt-get update
+sudo apt-get install docker-ce
+
+sudo groupadd docker
+sudo usermode -aG docker $USER
