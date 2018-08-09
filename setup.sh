@@ -63,3 +63,7 @@ sudo apt-get install docker-ce
 
 sudo groupadd docker
 sudo usermode -aG docker $USER
+
+sudo apt-get install docker-compose
+
+echo "even though unneeded, just reboot anyway at this point.  DONE!"
