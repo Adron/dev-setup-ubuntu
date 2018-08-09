@@ -8,7 +8,7 @@ sudo apt-get update
 
 echo "Installing fundamentally necessary dev tools."
 sudo apt-get install git -y
-sudo apt-get install 
+sudo apt-get install curl
 
 echo "Installing Go."
 VERSION="1.10.3"
